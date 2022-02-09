@@ -1,0 +1,36 @@
+<h1>Planos</h1>
+
+<br />
+
+<p>
+    <a href="<?php echo $this->url('plano/cadastrar'); ?>">Novo Plano</a>
+</p>
+
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Dias</th>
+        <th>Valor</th>
+        <th>Ação</th>
+    </tr>
+
+    <?php foreach($this->data as $entity): ?>
+    <tr>
+
+        <td><?php echo $entity->getIdPlano(); ?></td>
+        <td><?php echo $entity->getQtdDias(); ?></td>
+        <td><?php echo $entity->getValor(); ?></td>
+        <td>
+            <a href="<?php echo $this->url('plano/editar',
+                    array('controller'=>'plano','action'=>'editar','id'=> $entity->getIdPlano()));?>">Editar</a>
+
+            <a href="<?php echo $this->url('plano/deletar',
+                    array('controller'=>'plano','action'=>'deletar','id'=>$entity->getIdPlano()));?>">Delete</a>
+
+        </td>
+    </tr>
+    <?php endforeach; ?>
+</table>
+<br />
+
+<?php echo $this->paginationControl($this->data,'Sliding','partial/paginator'); ?>

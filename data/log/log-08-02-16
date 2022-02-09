@@ -1,0 +1,85 @@
+2016-02-08T23:06:25+01:00 INFO (6): 
+ Usuário: 1
+Mensagem de erro: Expected value of type "Permissao\Entity\Permissao" for association field "Usuario\Entity\Usuario#$idPermissao", got "string" instead.
+Descrição: Erro no cadastro do usuario
+
+
+2016-02-08T23:09:05+01:00 INFO (6): 
+ Usuário: 1
+Mensagem de erro: Expected value of type "Permissao\Entity\Permissao" for association field "Usuario\Entity\Usuario#$idPermissao", got "string" instead.
+Descrição: Erro no cadastro do usuario
+
+
+2016-02-08T23:09:56+01:00 INFO (6): 
+ Usuário: 1
+Mensagem de erro: Expected value of type "Permissao\Entity\Permissao" for association field "Usuario\Entity\Usuario#$idPermissao", got "string" instead.
+Descrição: Erro no cadastro do usuario
+
+
+2016-02-08T23:11:32+01:00 INFO (6): 
+ Usuário: 1
+Mensagem de erro: The identifier idPermissao is missing for a query of Permissao\Entity\Permissao
+Descrição: Erro no cadastro do usuario
+
+
+2016-02-08T23:11:44+01:00 INFO (6): 
+ Usuário: 1
+Mensagem de erro: Expected value of type "Plano\Entity\Plano" for association field "Usuario\Entity\Usuario#$idPlano", got "string" instead.
+Descrição: Erro no cadastro do usuario
+
+
+2016-02-08T23:12:05+01:00 INFO (6): 
+ Usuário: 1
+Mensagem de erro: Expected value of type "TreinoCliente\Entity\TreinoCliente" for association field "Usuario\Entity\Usuario#$idTreino", got "string" instead.
+Descrição: Erro no cadastro do usuario
+
+
+2016-02-08T23:12:33+01:00 INFO (6): 
+ Usuário: 1
+Mensagem de erro: The identifier idTreinoCliente is missing for a query of TreinoCliente\Entity\TreinoCliente
+Descrição: Erro no cadastro do usuario
+
+
+2016-02-08T23:13:28+01:00 INFO (6): 
+ Usuário: 1
+Mensagem de erro: Expected value of type "Usuario\Entity\Usuario" for association field "Log\Entity\LogUsuario#$usuarioAcao", got "integer" instead.
+Descrição: Erro no cadastro do usuario
+
+
+2016-02-08T23:46:36+01:00 INFO (6): 
+ Usuário: 1
+Mensagem de erro: Zend\View\Renderer\PhpRenderer::render: Unable to render template "mailer/add-user.phtml"; resolver could not resolve to a file
+Descrição: Erro no cadastro do usuario
+
+
+2016-02-08T23:47:26+01:00 INFO (6): 
+ Usuário: 1
+Mensagem de erro: Zend\View\Renderer\PhpRenderer::render: Unable to render template "base/mailer/add-user.phtml"; resolver could not resolve to a file
+Descrição: Erro no cadastro do usuario
+
+
+2016-02-08T23:48:37+01:00 INFO (6): 
+ Usuário: 1
+Mensagem de erro: Zend\View\Renderer\PhpRenderer::render: Unable to render template "/mailer/mailer/add-user.phtml"; resolver could not resolve to a file
+Descrição: Erro no cadastro do usuario
+
+
+2016-02-08T23:48:56+01:00 INFO (6): 
+ Usuário: 1
+Mensagem de erro: Zend\View\Renderer\PhpRenderer::render: Unable to render template "/base/mailer/mailer/add-user.phtml"; resolver could not resolve to a file
+Descrição: Erro no cadastro do usuario
+
+
+2016-02-08T23:52:31+01:00 INFO (6): 
+ Usuário: 1
+Mensagem de erro: Route with name "usuario" not found
+Descrição: Erro no cadastro do usuario
+
+
+2016-02-08T23:53:23+01:00 INFO (6): 
+ Usuário: 1
+Mensagem de erro: Cannot connect to SMTP server 64.233.190.16 (64.233.190.16:25), connect error 10060
+
+Descrição: Erro no cadastro do usuario
+
+

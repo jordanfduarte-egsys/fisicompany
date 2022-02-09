@@ -1,0 +1,25 @@
+<h3>Cadastrar Permissão</h3>
+<br />
+<?php
+$form = $this->form;
+$form->prepare();
+echo $this->form()->openTag($form);
+    echo $this->formElement($form->get('idPermissao'));
+    echo $this->formHidden($form->get('security'));
+
+    echo $this->formLabel($form->get('nome'));
+    echo $this->formElement($form->get('nome'));
+    echo $this->formElementErrors($form->get('nome'), array('class' => 'form-element-error'));
+    
+    foreach($form->getListActions() as $alias => $controller) :
+        echo $this->formLabel($form->get('permissao-' . $alias));
+        echo "<br/>";
+        echo $this->formElement($form->get('permissao-' . $alias));
+        echo $this->formElementErrors($form->get('permissao-' . $alias), array('class' => 'form-element-error'));
+        echo "<br/>";
+    endforeach;
+    
+    echo $this->formElement($form->get('submit'));
+
+echo $this->form()->closeTag();
+?>

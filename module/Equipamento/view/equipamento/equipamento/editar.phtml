@@ -1,0 +1,28 @@
+<h3>Alterar Equipamento</h3>
+<br />
+<?php
+
+$form = $this->form;
+$form->prepare();
+
+echo $this->form()->openTag($form);
+    echo $this->formElement($form->get('idEquipamento'));
+    echo $this->formHidden($form->get('security'));
+
+    echo $this->formLabel($form->get('nome'));
+    echo $this->formElement($form->get('nome'));
+    echo $this->formElementErrors($form->get('nome'), array('class' => 'form-element-error'));
+
+    echo $this->formLabel($form->get('qtd'));
+    echo $this->formElement($form->get('qtd'));
+    echo $this->formElementErrors($form->get('qtd'), array('class' => 'form-element-error'));
+
+
+    echo $this->formLabel($form->get('marca'));
+    echo $this->formElement($form->get('marca'));
+    echo $this->formElementErrors($form->get('marca'), array('class' => 'form-element-error'));
+
+    echo $this->formElement($form->get('submit'));
+
+echo $this->form()->closeTag();
+?>

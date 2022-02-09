@@ -1,0 +1,28 @@
+<h3>Novo Treino</h3>
+<br />
+<?php
+
+$form = $this->form;
+$form->prepare();
+
+echo $this->form()->openTag($form);
+    echo $this->formElement($form->get('idTreinoCliente'));
+    echo $this->formHidden($form->get('security'));
+
+    echo $this->formLabel($form->get('nome'));
+    echo $this->formElement($form->get('nome'));
+    echo $this->formElementErrors($form->get('nome'), array('class' => 'form-element-error'));
+
+    echo $this->formLabel($form->get('imagem'));
+    echo $this->formElement($form->get('imagem'));
+    echo $this->formElementErrors($form->get('imagem'), array('class' => 'form-element-error'));
+
+
+    echo $this->formLabel($form->get('status'));
+    echo $this->formElement($form->get('status'));
+    echo $this->formElementErrors($form->get('status'), array('class' => 'form-element-error'));
+
+    echo $this->formElement($form->get('submit'));
+
+echo $this->form()->closeTag();
+?>

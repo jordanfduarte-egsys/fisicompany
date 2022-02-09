@@ -1,0 +1,82 @@
+<?php echo $this->doctype(); ?>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <?php echo $this->headTitle('Fisicompany - Administrativo')->setSeparator(' - ')->setAutoEscape(false) ?>
+
+        <?php echo $this->headMeta()
+            ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+            ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+        ?>
+
+        <!-- styles -->
+        <?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'))
+                        ->prependStylesheet($this->basePath('css/style.css'))
+                        ->prependStylesheet($this->basePath('css/bootstrap-theme.min.css'))
+                        ->prependStylesheet($this->basePath('css/bootstrap.min.css')) ?>
+
+        <!-- Scripts -->
+        <?php echo $this->headScript()
+            ->prependFile($this->basePath('js/bootstrap.min.js'))
+            ->prependFile($this->basePath('js/jquery.min.js'))
+            ->prependFile($this->basePath('js/respond.min.js'), 'text/javascript', array('conditional' => 'lt IE 9',))
+            ->prependFile($this->basePath('js/html5shiv.min.js'),   'text/javascript', array('conditional' => 'lt IE 9',))
+        ; ?>
+
+    </head>
+    <body>
+    <?php   
+    $navigator = \Base\Service\CheckAutenticationNavigation::check(
+            $this->navigation('navigation'), 
+            $this->serviceLocatorHelper()->get("AuthService"));
+    
+    echo $navigator->menu()->setPartial(array('partial/navigation', 'default'));
+    ?>
+        <div class="container">
+            <div class="flash-messenger">
+                <?php
+                foreach ($this->flashMessenger()->getSuccessMessages() as $message) :
+                    echo $this->partial('partial/flash-messenger', array(
+                        'title' => 'Sucesso',
+                        'message' => $message,
+                        'alertClass' => 'success',
+                        'iconClass' => 'fa fa-check-square-o'
+                    ));
+                endforeach;
+                foreach ($this->flashMessenger()->getErrorMessages() as $message) :
+                    echo $this->partial('partial/flash-messenger', array(
+                        'title' => 'Erro',
+                        'message' => $message,
+                        'alertClass' => 'danger',
+                        'iconClass' => 'fa fa-times'
+                    ));
+                endforeach;
+                foreach ($this->flashMessenger()->getInfoMessages() as $message) :
+                    echo $this->partial('partial/flash-messenger', array(
+                        'title' => 'Informa��o',
+                        'message' => $message,
+                        'alertClass' => 'info',
+                        'iconClass' => 'fa fa-info-circle'
+                    ));
+                endforeach;
+                foreach ($this->flashMessenger()->getWarningMessages() as $message) :
+                    echo $this->partial('partial/flash-messenger', array(
+                        'title' => 'Alerta',
+                        'message' => $message,
+                        'alertClass' => 'warning',
+                        'iconClass' => 'fa fa-exclamation-circle'
+                    ));
+                endforeach;
+                ?>
+            </div>
+            <?php echo $this->content; ?>
+            <hr>
+            <footer>
+                <p>&copy; 2005 - <?php echo date('Y') ?> by Zend Technologies Ltd. All rights reserved.</p>
+            </footer>
+        </div>
+        <!-- /container -->
+        <?php echo $this->inlineScript() ?>
+    </body>
+</html>

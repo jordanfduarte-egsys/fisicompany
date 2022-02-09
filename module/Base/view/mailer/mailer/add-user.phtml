@@ -1,0 +1,9 @@
+Olá <?php echo $this->nome; ?>,
+<br/>
+<br/>
+<p>
+    Esse email tem o objetivo de confirmar seu cadastro em nosso sistema.
+    <br/>
+    Segue link para ativaçãoo de seu cadastro: 
+    <?php echo $this->url('usuarios/ativacao', array('key'=> $this->activateKey)); ?>
+</p>

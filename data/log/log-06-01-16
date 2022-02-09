@@ -1,0 +1,16 @@
+2016-01-06T12:21:03+01:00 INFO (6): 
+ Usuário: 1
+Mensagem de erro: An exception occurred while executing 'INSERT INTO permissao_modulo (nome, id_permissao) VALUES (?, ?)' with params ["Application\\Controller\\IndexController::deletarAction", null]:
+
+SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'id_permissao' cannot be null
+Descrição: Erro no cadastro do permissao
+
+
+2016-01-06T12:22:07+01:00 INFO (6): 
+ Usuário: 1
+Mensagem de erro: An exception occurred while executing 'INSERT INTO permissao_modulo (nome, id_permissao) VALUES (?, ?)' with params ["Application\\Controller\\IndexController::deletarAction", null]:
+
+SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'id_permissao' cannot be null
+Descrição: Erro no cadastro do permissao
+
+

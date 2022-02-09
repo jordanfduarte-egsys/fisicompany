@@ -1,0 +1,37 @@
+<h1>Usuários</h1>
+
+<br />
+
+<p>
+    <a href="<?php echo $this->url('usuarios/cadastrar'); ?>">Novo Usuário</a>
+</p>
+
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Permissão</th>
+        <th>Cadastro</th>
+        <th>Ação</th>
+    </tr>
+
+    <?php foreach($this->data as $entity): ?>
+    <tr>
+        <td><?php echo $entity->getId(); ?></td>
+        <td><?php echo $entity->getNome() . $entity->getSobreNome(); ?></td>
+        <td><?php echo $entity->getIdPermissao()->getNome(); ?></td>
+        <td><?php echo $entity->getDtCadastro()->format("d/m/Y"); ?></td>
+        <td>
+            <a href="<?php echo $this->url('usuarios/editar',
+                    array('controller'=>'usuario','action'=>'editar','id'=> $entity->getId()));?>">Editar</a>
+
+            <a href="<?php echo $this->url('usuarios/desativar',
+                    array('controller'=>'usuario','action'=>'desativar','id'=>$entity->getId()));?>">Desativar</a>
+
+        </td>
+    </tr>
+    <?php endforeach; ?>
+</table>
+<br />
+
+<?php echo $this->paginationControl($this->data,'Sliding','partial/paginator'); ?>

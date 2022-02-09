@@ -1,0 +1,47 @@
+<h3>Alterar usuários</h3>
+<br />
+<?php
+
+$form = $this->form;
+$form->prepare();
+
+echo $this->form()->openTag($form);
+    echo $this->formElement($form->get('id'));
+    echo $this->formHidden($form->get('security'));
+
+    echo $this->formLabel($form->get('nome'));
+    echo $this->formElement($form->get('nome'));
+    echo $this->formElementErrors($form->get('nome'), array('class' => 'form-element-error'));
+
+    echo $this->formLabel($form->get('sobreNome'));
+    echo $this->formElement($form->get('sobreNome'));
+    echo $this->formElementErrors($form->get('sobreNome'), array('class' => 'form-element-error'));
+
+    echo $this->formLabel($form->get('email'));
+    echo $this->formElement($form->get('email'));
+    echo $this->formElementErrors($form->get('email'), array('class' => 'form-element-error'));
+    
+    echo $this->formLabel($form->get('senha'));
+    echo $this->formElement($form->get('senha'));
+    echo $this->formElementErrors($form->get('senha'), array('class' => 'form-element-error'));
+    
+    echo $this->formLabel($form->get('foto'));
+    echo $this->formElement($form->get('foto'));
+    echo $this->formElementErrors($form->get('foto'), array('class' => 'form-element-error'));
+    
+    echo $this->formLabel($form->get('idTreino'));
+    echo $this->formElement($form->get('idTreino'));
+    echo $this->formElementErrors($form->get('idTreino'), array('class' => 'form-element-error'));
+    
+    echo $this->formLabel($form->get('idPlano'));
+    echo $this->formElement($form->get('idPlano'));
+    echo $this->formElementErrors($form->get('idPlano'), array('class' => 'form-element-error'));    
+
+    echo $this->formLabel($form->get('dtCadastro'));
+    echo $this->formElement($form->get('dtCadastro'));
+    echo $this->formElementErrors($form->get('dtCadastro'), array('class' => 'form-element-error'));    
+   
+    echo $this->formElement($form->get('submit'));
+
+echo $this->form()->closeTag();
+?>

@@ -1,0 +1,38 @@
+<h1>Equipamentos</h1>
+
+<br />
+
+<p>
+    <a href="<?php echo $this->url('equipamento/cadastrar'); ?>">Novo Equipamento</a>
+</p>
+
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Quantidade</th>
+        <th>Marca</th>
+        <th>Ação</th>
+    </tr>
+
+    <?php foreach($this->data as $entity): ?>
+    <tr>
+
+        <td><?php echo $entity->getIdEquipamento(); ?></td>
+        <td><?php echo $entity->getNome(); ?></td>
+        <td><?php echo $entity->getQtd(); ?></td>
+        <td><?php echo $entity->getmarca(); ?></td>
+        <td>
+            <a href="<?php echo $this->url('equipamento/editar',
+                    array('controller'=>'plano','action'=>'editar','id'=> $entity->getIdEquipamento()));?>">Editar</a>
+
+            <a href="<?php echo $this->url('equipamento/deletar',
+                    array('controller'=>'plano','action'=>'deletar','id'=>$entity->getIdEquipamento()));?>">Delete</a>
+
+        </td>
+    </tr>
+    <?php endforeach; ?>
+</table>
+<br />
+
+<?php echo $this->paginationControl($this->data,'Sliding','partial/paginator'); ?>

@@ -1,0 +1,28 @@
+<h3>Novo Plano</h3>
+<br />
+<?php
+
+$form = $this->form;
+$form->prepare();
+
+echo $this->form()->openTag($form);
+    echo $this->formElement($form->get('idPlano'));
+    echo $this->formHidden($form->get('security'));
+
+    echo $this->formLabel($form->get('descPlano'));
+    echo $this->formElement($form->get('descPlano'));
+    echo $this->formElementErrors($form->get('descPlano'), array('class' => 'form-element-error'));
+
+    echo $this->formLabel($form->get('qtdDias'));
+    echo $this->formElement($form->get('qtdDias'));
+    echo $this->formElementErrors($form->get('qtdDias'), array('class' => 'form-element-error'));
+
+
+    echo $this->formLabel($form->get('valor'));
+    echo $this->formElement($form->get('valor'));
+    echo $this->formElementErrors($form->get('valor'), array('class' => 'form-element-error'));
+
+    echo $this->formElement($form->get('submit'));
+
+echo $this->form()->closeTag();
+?>

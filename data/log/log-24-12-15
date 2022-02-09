@@ -1,0 +1,8 @@
+2015-12-24T17:05:52+01:00 INFO (6): 
+ Usu�rio: 1
+Mensagem de erro: An exception occurred while executing 'INSERT INTO treino_cliente (id_treino_sistema, nome, imagem, status) VALUES (?, ?, ?, ?)' with params [null, "Treino A com B", null, "1"]:
+
+SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'imagem' cannot be null
+Descri��o: Erro no cadastro do treino
+
+

@@ -1,0 +1,34 @@
+<h1>Permissões</h1>
+
+<br />
+
+<p>
+    <a href="<?php echo $this->url('permissao/cadastrar'); ?>">Nova permissão</a>
+</p>
+
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Ação</th>
+    </tr>
+
+    <?php foreach($this->data as $entity): ?>
+    <tr>
+
+        <td><?php echo $entity->getIdPermissao(); ?></td>
+        <td><?php echo $entity->getNome(); ?></td>        
+        <td>
+            <a href="<?php echo $this->url('permissao/editar',
+                    array('controller'=>'plano','action'=>'editar','id'=> $entity->getIdPermissao()));?>">Editar</a>
+
+            <a href="<?php echo $this->url('permissao/deletar',
+                    array('controller'=>'plano','action'=>'deletar','id'=>$entity->getIdPermissao()));?>">Delete</a>
+
+        </td>
+    </tr>
+    <?php endforeach; ?>
+</table>
+<br />
+
+<?php echo $this->paginationControl($this->data,'Sliding','partial/paginator'); ?>

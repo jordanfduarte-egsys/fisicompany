@@ -1,0 +1,9 @@
+<div class="alert alert-<?php echo $alertClass; ?>" role="alert">
+    <div class="container">
+        <span> <i class="<?php echo $iconClass; ?>"></i> </span>
+        <strong><?php echo $title; ?>: </strong> <?php echo $message; ?>
+        <a class="fechar-alerta" onclick="javascript:flash_messenger.removeAlert(this);">
+            <i class="fa fa-times"></i>
+        </a>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+<h1>Exercícios</h1>
+
+<br />
+
+<p>
+    <a href="<?php echo $this->url('exercicio/cadastrar'); ?>">Novo Exercício</a>
+</p>
+
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Descricao</th>
+        <th>Ação</th>
+    </tr>
+
+    <?php foreach($this->data as $entity): ?>
+        <tr>
+    
+            <td><?php echo $entity->getId(); ?></td>
+            <td><?php echo $entity->getNome(); ?></td>
+            <td><?php echo $entity->getDescricao(); ?></td>
+            <td>
+                <a href="<?php echo $this->url('exercicio/editar',
+                        array('controller'=>'treino','action'=>'editar','id'=> $entity->getId(), "page" => $page));?>">Editar</a>
+    
+                <a href="<?php echo $this->url('exercicio/deletar',
+                        array('controller'=>'treino','action'=>'deletar','id'=>$entity->getId(), "page" => $page));?>">Delete</a>
+    
+            </td>
+        </tr>
+    <?php endforeach; ?>
+</table>
+<br />
+
+<?php echo $this->paginationControl($this->data,'Sliding','partial/paginator'); ?>
