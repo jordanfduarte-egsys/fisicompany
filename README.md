@@ -1,7 +1,7 @@
 ZendSkeletonApplication
 =======================
 
-O que o sistema Faz
+O que o sistema faz ?
 -----------
 Sistema de gerenciamento de academias, onde é possivel gerenciar os treinos, clientes, usuarios e controlar a catraca de acesso e treino do dia.
 
