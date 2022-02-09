@@ -1,7 +1,11 @@
 ZendSkeletonApplication
 =======================
 
-Introduction
+O que o sistema Faz
+-----------
+Sistema de gerenciamento de academias, onde é possivel gerenciar os treinos, clientes, usuarios e controlar a catraca de acesso e treino do dia.
+
+Introduction Instalation
 ------------
 This is a simple, skeleton application using the ZF2 MVC layer and module
 systems. This application is meant to be used as a starting place for those
